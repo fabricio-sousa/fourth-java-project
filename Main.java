@@ -1,27 +1,23 @@
-import java.util.Scanner;
-
-import javax.print.event.PrintJobListener;
-
 class Main {
     public static void main(String[] args) {
+      Car car = new Car();
+      // Set the name of car to "Ferrari" using the setName method
+      car.setName("Ferrari");
       
-        Scanner scanner = new Scanner(System.in);
-        
-        Bicycle Bicycle = new Bicycle("Bianchi", "Green");
-        Bicycle.printData();
-        System.out.print("Enter distance to move: ");
-        int bikemove = scanner.nextInt();
-        Bicycle.run(bikemove);
-        System.out.println("=================");
-
-        Car Car = new Car("Ferrari", "Red");
-        Car.printData();
-        System.out.print("Enter distance to move: ");
-        int toMove = scanner.nextInt();
-        Car.run(toMove);
-        System.out.println("-----------------");
-        System.out.print("Enter amount to refuel: ");
-        int refuel = scanner.nextInt();
-        Car.charge(refuel);
+      // Set the color of car to "Red" using the setColor method
+      car.setColor("Red");
+      Bicycle bicycle = new Bicycle();
+      // Set the name of bicycle to "Bianchi" using the setName method
+      bicycle.setName("Bianchi");
+      
+      // Set the color of bicycle to "Green" using the setColor method
+      bicycle.setColor("Green");
+      
+      System.out.println("【Car Info】");
+      car.printData();
+  
+      System.out.println("=================");
+      System.out.println("【Bicycle Info】");
+      bicycle.printData();
     }
-}
+  }
