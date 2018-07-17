@@ -1,23 +1,28 @@
+import java.util.Scanner;
+
 class Main {
-    public static void main(String[] args) {
-      Car car = new Car();
-      // Set the name of car to "Ferrari" using the setName method
-      car.setName("Ferrari");
-      
-      // Set the color of car to "Red" using the setColor method
-      car.setColor("Red");
-      Bicycle bicycle = new Bicycle();
-      // Set the name of bicycle to "Bianchi" using the setName method
-      bicycle.setName("Bianchi");
-      
-      // Set the color of bicycle to "Green" using the setColor method
-      bicycle.setColor("Green");
-      
-      System.out.println("【Car Info】");
-      car.printData();
-  
-      System.out.println("=================");
-      System.out.println("【Bicycle Info】");
-      bicycle.printData();
-    }
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    Car car = new Car();
+    car.setName("Ferrari");
+    car.setColor("Red");
+    Bicycle bicycle = new Bicycle();
+    bicycle.setName("Bianchi");
+    bicycle.setColor("Green");
+
+    System.out.println("【Car Info】");
+    car.printData();
+    // Output "Fuel: ____L" using the getFuel method
+    System.out.println("Fuel: " + car.getFuel() + "L");
+    
+    System.out.println("-----------------");
+    System.out.print("Enter refuel amount：");
+    int litre = scanner.nextInt();
+    // Call the charge method and pass litre as an argument
+    car.charge(litre);
+    
+    System.out.println("=================");
+    System.out.println("【Bicycle Info】");
+    bicycle.printData();
   }
+}
