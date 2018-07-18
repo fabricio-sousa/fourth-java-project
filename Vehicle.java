@@ -1,9 +1,9 @@
 class Vehicle {
   private String name;
   private String color;
-  private int distance = 0;
-  
-  // Define the constructor for the Vehicle class
+  // Rewrite the code below using protected
+  protected int distance = 0;
+
   Vehicle(String name, String color) {
     this.name = name;
     this.color = color;

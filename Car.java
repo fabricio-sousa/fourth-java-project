@@ -1,8 +1,6 @@
 class Car extends Vehicle {
   private int fuel = 50;
-  
-  // Define the constructor for the Car class
-  // Call the constructor of the superclass using super
+
   Car(String name, String color) {
     super(name, color);
   }
@@ -13,6 +11,18 @@ class Car extends Vehicle {
 
   public void printData() {
     super.printData();
+    System.out.println("Fuel: " + this.fuel + "L");
+  }
+  
+  public void run(int distance) {
+    System.out.println("Moving " + distance + "km ...");
+    if (distance <= this.fuel) {
+      this.distance += distance;
+      this.fuel -= distance;
+    } else {
+      System.out.println("Not enough fuel");
+    }
+    System.out.println("Distance: " + this.distance + "km");
     System.out.println("Fuel: " + this.fuel + "L");
   }
 

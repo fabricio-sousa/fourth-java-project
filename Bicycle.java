@@ -1,7 +1,11 @@
 class Bicycle extends Vehicle {
-    // Define the constructor for the Bicycle class
-    // Call the constructor of the superclass using super
     Bicycle(String name, String color) {
       super(name, color);
+    }
+  
+    public void run(int distance) {
+      System.out.println("Moving " + distance + "km ...");
+      this.distance += distance;
+      System.out.println("Distance: " + this.distance + "km");
     }
   }
