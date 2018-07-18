@@ -1,32 +1,32 @@
-import java.util.Scanner;
-
 class Main {
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
+    Person person1 = new Person("Kate", "Jones", 27, 1.6, 50.0);
+    Person person2 = new Person("John", "Christopher", "Smith", 65, 1.75, 80.0);
+
     Car car = new Car("Ferrari", "Red");
+    // Set the owner of car to person1 using the setOwner method
+    car.setOwner(person1);
+    
     Bicycle bicycle = new Bicycle("Bianchi", "Green");
+    // Set the owner of bicycle to person2 using the setOwner method 
+    bicycle.setOwner(person2);
 
     System.out.println("【Car Info】");
     car.printData();
     System.out.println("-----------------");
-    System.out.print("Enter distance to move: ");
-    int carDistance = scanner.nextInt();
-    // Call the run method and pass carDistance as an argument
-    car.run(carDistance);
-    
-    System.out.println("-----------------");
-    System.out.print("Enter amount to refuel: ");
-    int litre = scanner.nextInt();
-    car.charge(litre);
-    
+    System.out.println("【Car Owner Info】");
+    // Get the owner of car using the getOwner method,
+    // and use printData to output the owner information
+    car.getOwner().printData();
+
     System.out.println("=================");
     System.out.println("【Bicycle Info】");
     bicycle.printData();
     System.out.println("-----------------");
-    System.out.print("Enter distance to move: ");
-    int bicycleDistance = scanner.nextInt();
-    // Call the run method and pass bicycleDistance as an argument
-    bicycle.run(bicycleDistance);
+    System.out.println("【Bicycle Owner Info】");
+    // Get the owner of bicycle using the getOwner method,
+    // and use printData to output the owner information
+    bicycle.getOwner().printData();
     
   }
 }

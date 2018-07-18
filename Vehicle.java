@@ -1,8 +1,9 @@
-// Make the Vehicle class an abstract class
 abstract class Vehicle {
   private String name;
   private String color;
   protected int distance = 0;
+  // Declare the owner instance field
+  private Person owner;
 
   Vehicle(String name, String color) {
     this.name = name;
@@ -18,19 +19,29 @@ abstract class Vehicle {
   public int getDistance() {
     return this.distance;
   }
+  
+  // Define the getter for the owner field
+  public Person getOwner() {
+    return this.owner;
+  }
+  
   public void setName(String name) {
     this.name = name;
   }
   public void setColor(String color) {
     this.color = color;
   }
+  
+  // Define the setter for the owner field
+  public void setOwner(Person person) {
+    this.owner = person;
+  }
+
   public void printData() {
     System.out.println("Name: " + this.name);
     System.out.println("Color: " + this.color);
     System.out.println("Distance: " + this.distance + "km");
   }
-  
-  // Define the run abstract method
+
   abstract public void run(int distance);
-  
 }
