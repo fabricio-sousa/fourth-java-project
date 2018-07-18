@@ -18,7 +18,7 @@ class Person {
       this(firstName, lastName, age, height, weight);
       this.middleName = middleName;
     }
-  
+    
     public String fullName() {
       if (this.middleName == null) {
         return this.firstName + " " + this.lastName;
@@ -39,14 +39,8 @@ class Person {
       return this.weight / this.height / this.height;
     }
     
-    // Define the buy method, it should accept Car type arguments
-    public void buy(Car car) {
-      car.setOwner(this);
+    // Combine the two methods below into a single method
+    public void buy(Vehicle vehicle) {
+      vehicle.setOwner(this);
     }
-    
-    // Define the buy method, it should accept Bicycle type arguments
-    public void buy(Bicycle bicycle) {
-      bicycle.setOwner(this);
-    }
-    
   }
