@@ -1,7 +1,7 @@
-class Vehicle {
+// Make the Vehicle class an abstract class
+abstract class Vehicle {
   private String name;
   private String color;
-  // Rewrite the code below using protected
   protected int distance = 0;
 
   Vehicle(String name, String color) {
@@ -29,4 +29,8 @@ class Vehicle {
     System.out.println("Color: " + this.color);
     System.out.println("Distance: " + this.distance + "km");
   }
+  
+  // Define the run abstract method
+  abstract public void run(int distance);
+  
 }
