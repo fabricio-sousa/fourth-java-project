@@ -4,19 +4,18 @@ class Main {
     Person person2 = new Person("John", "Christopher", "Smith", 65, 1.75, 80.0);
 
     Car car = new Car("Ferrari", "Red");
-    // Set the owner of car to person1 using the setOwner method
-    car.setOwner(person1);
-    
     Bicycle bicycle = new Bicycle("Bianchi", "Green");
-    // Set the owner of bicycle to person2 using the setOwner method 
-    bicycle.setOwner(person2);
+    
+    // Make person1 purchase car using the buy method
+    person1.buy(car);
+    
+    // Make person2 purchase bicycle using the buy method
+    person2.buy(bicycle);
 
     System.out.println("【Car Info】");
     car.printData();
     System.out.println("-----------------");
     System.out.println("【Car Owner Info】");
-    // Get the owner of car using the getOwner method,
-    // and use printData to output the owner information
     car.getOwner().printData();
 
     System.out.println("=================");
@@ -24,9 +23,6 @@ class Main {
     bicycle.printData();
     System.out.println("-----------------");
     System.out.println("【Bicycle Owner Info】");
-    // Get the owner of bicycle using the getOwner method,
-    // and use printData to output the owner information
     bicycle.getOwner().printData();
-    
   }
 }

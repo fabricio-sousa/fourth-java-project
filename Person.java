@@ -38,5 +38,15 @@ class Person {
     public double bmi() {
       return this.weight / this.height / this.height;
     }
+    
+    // Define the buy method, it should accept Car type arguments
+    public void buy(Car car) {
+      car.setOwner(this);
+    }
+    
+    // Define the buy method, it should accept Bicycle type arguments
+    public void buy(Bicycle bicycle) {
+      bicycle.setOwner(this);
+    }
+    
   }
-  
