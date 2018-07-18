@@ -1,15 +1,20 @@
 class Car extends Vehicle {
-  // Declare the fuel instance field
   private int fuel = 50;
-  
-  // Define the getter for the fuel field
+
   public int getFuel() {
     return this.fuel;
   }
   
-  // Define the charge instance method
+  // Define the printData method
+  public void printData() {
+    System.out.println("Name: " + this.getName());
+    System.out.println("Color: " + this.getColor());
+    System.out.println("Distance: " + this.getDistance() + "km");
+    System.out.println("Fuel: " + this.fuel + "L");
+  }
+
   public void charge(int litre) {
-    System.out.println("Adding " + litre + " litres ...");
+    System.out.println("Adding " + litre + "L ...");
     if (litre <= 0) {
       System.out.println("No fuel added");
     } else if (litre + this.fuel >= 100) {

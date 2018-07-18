@@ -12,15 +12,12 @@ class Main {
 
     System.out.println("【Car Info】");
     car.printData();
-    // Output "Fuel: ____L" using the getFuel method
-    System.out.println("Fuel: " + car.getFuel() + "L");
     
     System.out.println("-----------------");
-    System.out.print("Enter refuel amount：");
+    System.out.print("Enter amount to refuel: ");
     int litre = scanner.nextInt();
-    // Call the charge method and pass litre as an argument
     car.charge(litre);
-    
+
     System.out.println("=================");
     System.out.println("【Bicycle Info】");
     bicycle.printData();
