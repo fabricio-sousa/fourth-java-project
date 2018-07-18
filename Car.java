@@ -4,13 +4,11 @@ class Car extends Vehicle {
   public int getFuel() {
     return this.fuel;
   }
-  
-  // Define the printData method
+
   public void printData() {
-    System.out.println("Name: " + this.getName());
-    System.out.println("Color: " + this.getColor());
-    System.out.println("Distance: " + this.getDistance() + "km");
-    System.out.println("Fuel: " + this.fuel + "L");
+    // Rewrite the duplicate code below using super
+    super.printData();
+    System.out.println("Fuel: " + this.fuel + " L");
   }
 
   public void charge(int litre) {
